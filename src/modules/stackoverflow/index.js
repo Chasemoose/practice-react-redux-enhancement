@@ -1,7 +1,7 @@
-import GitHub from './github'
-import reducer from './github.reducer'
+import StackOverFlow from './stackoverflow'
+import reducer from './stackoverflow.reducer'
 
 export {
-    GitHub,
+    StackOverFlow,
     reducer
 }

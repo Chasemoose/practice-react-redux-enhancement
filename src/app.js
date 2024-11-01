@@ -2,10 +2,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import {createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
+import { thunk } from 'redux-thunk'
 import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { reducer } from './modules/github'
+import { reducer } from './modules/stackoverflow'
 import App from './components/App';
 
 const store = createStore(
