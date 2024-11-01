@@ -15,7 +15,7 @@ const reducer = (state=initState, action ) => {
         case types.SET_PHRASE:
             const {phrase} = action.payload
             return {...state, phrase: phrase}
-        case type.SET_REPOS:
+        case types.SET_REPOS:
             const {repos} = action.payload
             return {...state, repos: repos}
         default:

@@ -4,13 +4,13 @@ import { setPhrase, setLogin, getRepos } from "./github.actions";
 
 const GitHub = () => {
 
-    const { login, phrase, repos } = useSelector(state => state)
+    const { login, phrase, repos } = useSelector(state => state.github)
     const dispatch = useDispatch()
 
     function handleLoginChange(e) {
         const login = e.target.value
         dispatch(setLogin(login))
-        dispatch(getRepos())
+        dispatch(getRepos(login))
     }
 
 	return (
