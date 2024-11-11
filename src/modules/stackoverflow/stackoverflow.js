@@ -8,14 +8,22 @@ const StackOverFlow = () => {
 
     // useEffect(() => {
     //     dispatch(getPosts(phrase, sort));
-    // }, [dispatch, phrase, sort]);
+    // }, [phrase, sort]);
 
-	useEffect(
-		(phrase, sort) => {
-			dispatch(getPosts(phrase, sort))
-		},
-		[phrase, sort]
-	)
+	useEffect(() => {
+		dispatch(getPosts(phrase, sort))
+	}, [dispatch, phrase, sort])
+
+
+	// useEffect(() => {
+	// 	if (phrase) {  
+	// 		dispatch(getPosts(phrase, sort));
+	// 	}
+	// }, [phrase, sort, dispatch]);
+
+
+	
+
 
 	return (
 		<section>
@@ -39,8 +47,9 @@ const StackOverFlow = () => {
 						<a href={p.link}>{p.title}</a>
 					</li>
 				))}
+			
 
-				{/* {posts.filter(r => r.name.includes(phrase)).map(r => <li key={r.id}><a href={r.url}>{r.name}</a></li>)} */}
+				
 			</ul>
 		</section>
 	)

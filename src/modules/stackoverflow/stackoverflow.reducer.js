@@ -2,7 +2,7 @@ import * as types from './stackoverflow.types'
 
 
 const initState = {
-    sort: 'activity',
+    sort: '',
     phrase: '',
     posts: [],
 }
